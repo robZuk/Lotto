@@ -58,7 +58,7 @@ const playButton = document.querySelector(".play");
 const resetButton = document.querySelector(".reset");
 const sectionAddedList = document.querySelector(".yourNumbers");
 const sectionRandomList = document.querySelector(".randomNumbers");
-const h3Result = document.querySelector(".randomNumbers h3");
+const pResult = document.querySelector(".randomNumbers p:nth-child(3)");
 const ulAddList = document.querySelector(".yourNumbers ul");
 const ulRandomList = document.querySelector(".randomNumbers ul");
 
@@ -98,7 +98,7 @@ const randomNumbersGenerator = () => {
   resetButton.classList.remove("hidden");
   showNumbers(ulRandomList, randomNumbers);
 
-  h3Result.innerHTML += checkResult();
+  pResult.innerHTML += checkResult();
 };
 
 const checkResult = () => {
@@ -123,7 +123,7 @@ const resetGame = () => {
   sectionRandomList.classList.add("hidden");
   form.classList.remove("hidden");
   resetButton.classList.add("hidden");
-  h3Result.innerHTML = "Trafiłeś: ";
+  pResult.innerHTML = "Trafiłeś: ";
 };
 
 resetButton.addEventListener("click", resetGame);

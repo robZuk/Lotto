@@ -1,55 +1,147 @@
-.hidden {
-  display: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  box-sizing: border-box;
   text-align: center;
-  font-size: 25px;
   font-family: "Roboto", sans-serif;
+  background-color: rgb(255, 153, 102);
 }
 
 h1 {
   letter-spacing: 5px;
+  font-size: 5vw;
   font-weight: 900;
   font-style: italic;
 }
 
-input {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin: 20px 20px;
-  padding: 15px 8px 15px 24px;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+label {
+  display: block;
+  margin-bottom: 2%;
+  font-size: 2vw;
+}
 
-  border: 2px solid black;
+.inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  width: 7vw;
+  height: 7vw;
+  box-sizing: border-box;
+  color: black;
+  border: 1px solid black;
   border-radius: 90px;
   outline: none;
-  font-size: 23px;
-  font-weight: 700;
+  font-size: 2vw;
   text-align: center;
+  font-weight: 700;
   background-color: lightcoral;
+  transition: linear 0.1s;
+}
+input:hover {
+  border: 2px solid black;
 }
 
 p {
-  text-transform: uppercase;
   display: inline-block;
-  /* margin: 15px; */
-  font-size: 20px;
+  margin: 4vh;
+  font-size: 2vw;
   font-weight: 700;
 }
+.yourNumbers {
+  display: flex;
+  flex-direction: column;
+}
 
+.yourNumbers ul {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 4vw;
+  justify-content: space-around;
+}
+.randomNumbers {
+  display: flex;
+  flex-direction: column;
+}
+
+.randomNumbers ul {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  justify-content: space-around;
+}
 li {
-  display: inline-block;
   list-style-type: none;
-  width: 40px;
-  height: 40px;
-  margin: 0px 30px 0px 30px;
-  padding: 15px;
-  border: 2px solid black;
+  width: 7vw;
+  height: 7vw;
+  padding: 2vw;
+  border: 1px solid black;
   border-radius: 90px;
-  outline: none;
-  font-size: 33px;
+  font-size: 2vw;
   font-weight: 700;
   text-align: center;
   background-color: lightcoral;
+}
+
+button {
+  box-sizing: border-box;
+  margin: 2% auto;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  background-color: inherit;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 1.5vw;
+  padding: 7px 7px;
+  transition: linear 0.2s;
+}
+
+button:hover {
+  color: white;
+  border: 3px white;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  z-index: -1;
+  border-radius: 10px;
+  transition: ease-out 0.2s;
+}
+
+button:hover::after {
+  width: 100%;
+  background-color: indianred;
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
