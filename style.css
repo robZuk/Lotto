@@ -58,7 +58,9 @@ input {
   transition: linear 0.1s;
 }
 input:hover {
-  border: 2px solid black;
+  border: 0px solid black;
+  box-shadow: 0.02vw 0.1vh 2vw 0.3vw white;
+  color: white;
 }
 
 p {
@@ -103,6 +105,7 @@ li {
   font-weight: 700;
   text-align: center;
   background-color: lightcoral;
+  box-shadow: 0.5vw 0.3vw 0.9vw white inset;
 }
 
 button {
@@ -121,7 +124,8 @@ button {
 
 button:hover {
   color: white;
-  border: 3px white;
+  border: 1px solid white;
+  box-shadow: 0.02vw 0.1vh 2vw 0.3vw white;
 }
 
 button::after {

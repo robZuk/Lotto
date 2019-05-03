@@ -75,14 +75,15 @@ const addNumbers = function(e) {
   form.classList.add("hidden");
   sectionAddedList.classList.remove("hidden");
   playButton.classList.remove("hidden");
-  showNumbers(ulAddList, addedNumbers);
+  showNumbers(ulAddList, addedNumbers, "#FFBF59");
 };
 
-const showNumbers = (list, numbers) => {
+const showNumbers = (list, numbers, color) => {
   numbers.forEach(number => {
     const li = document.createElement("li");
     list.appendChild(li);
     li.textContent = number;
+    li.style.backgroundColor = color;
   });
 };
 
@@ -94,9 +95,10 @@ const randomNumbersGenerator = () => {
     } else i--;
   }
   sectionRandomList.classList.remove("hidden");
+
   playButton.classList.add("hidden");
   resetButton.classList.remove("hidden");
-  showNumbers(ulRandomList, randomNumbers);
+  showNumbers(ulRandomList, randomNumbers, "#E86D51");
 
   pResult.innerHTML += checkResult();
 };
