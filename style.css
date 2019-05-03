@@ -8,7 +8,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  background-color: rgb(255, 153, 102);
+  background-color: #ffaa80;
 }
 
 h1 {
@@ -16,6 +16,7 @@ h1 {
   font-size: 5vw;
   font-weight: 900;
   font-style: italic;
+  color: black;
 }
 
 form {
@@ -142,7 +143,7 @@ button::after {
 
 button:hover::after {
   width: 100%;
-  background-color: indianred;
+  background-color: #ff6059;
   display: block;
 }
 
