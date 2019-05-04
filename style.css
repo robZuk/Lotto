@@ -17,6 +17,7 @@ h1 {
   font-weight: 900;
   font-style: italic;
   color: black;
+  text-shadow: 1vw 1vw 2vw white, -1vw -1vw 2vw white;
 }
 
 form {
