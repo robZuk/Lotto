@@ -12,36 +12,37 @@
     />
   </head>
   <body>
-    <h1>LOTTO</h1>
+    <div class="wrap">
+      <h1>LOTTO</h1>
 
-    <form>
-      <label>Podaj 6 liczb</label>
-      <section class="inputs">
-        <input type="number" required min="1" max="49" />
-        <input type="number" required min="1" max="49" />
-        <input type="number" required min="1" max="49" />
-        <input type="number" required min="1" max="49" />
-        <input type="number" required min="1" max="49" />
-        <input type="number" required min="1" max="49" />
+      <form>
+        <label>Podaj 6 liczb</label>
+        <section class="inputs">
+          <input type="number" required min="1" max="49" />
+          <input type="number" required min="1" max="49" />
+          <input type="number" required min="1" max="49" />
+          <input type="number" required min="1" max="49" />
+          <input type="number" required min="1" max="49" />
+          <input type="number" required min="1" max="49" />
+        </section>
+
+        <button type="submit" class="add">Dodaj liczby</button>
+      </form>
+
+      <section class="yourNumbers hidden">
+        <p>Twoje liczby to:</p>
+        <ul></ul>
       </section>
-
-      <button type="submit" class="add">Dodaj liczby</button>
-    </form>
-
-    <section class="yourNumbers hidden">
-      <p>Twoje liczby to:</p>
-      <ul></ul>
-    </section>
-    <div><button type="submit" class="play hidden">Losuj liczby</button></div>
-    <section class="randomNumbers hidden">
-      <p>Wylosowałeś:</p>
-      <ul></ul>
-      <p>Trafiłeś:</p>
-    </section>
-    <div>
-      <button type="submit" class="reset hidden">Zagraj jeszcze raz</button>
+      <div><button type="submit" class="play hidden">Losuj liczby</button></div>
+      <section class="randomNumbers hidden">
+        <p>Wylosowałeś:</p>
+        <ul></ul>
+        <p>Trafiłeś:</p>
+      </section>
+      <div>
+        <button type="submit" class="reset hidden">Zagraj jeszcze raz</button>
+      </div>
     </div>
-
     <script src="main.js"></script>
   </body>
 </html>
