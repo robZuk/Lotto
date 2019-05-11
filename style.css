@@ -5,6 +5,7 @@
 }
 
 body {
+  margin: 5vh;
   text-align: center;
   font-family: "Roboto", sans-serif;
   background-color: #ffaa80;
@@ -14,7 +15,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* align-items: center; */
   height: 100vh;
+  /* max-height: 100vh; */
 }
 
 h1 {
