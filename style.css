@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 5vh;
+html {
   text-align: center;
   font-family: "Roboto", sans-serif;
   background-color: #ffaa80;
@@ -15,9 +14,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  box-sizing: border-box;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   height: 100vh;
-  /* max-height: 100vh; */
 }
 
 h1 {
@@ -48,6 +48,7 @@ label {
   margin-right: 10vw;
 }
 
+/* remove default arrows from inputs */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -72,12 +73,23 @@ input {
   background-color: lightcoral;
   transition: linear 0.1s;
 }
-input:hover {
+/* input:hover {
+  border: 0px solid black;
+  box-shadow: 0.02vw 0.1vh 2vw 0.3vw white;
+  color: white;
+} */
+
+input:focus {
   border: 0px solid black;
   box-shadow: 0.02vw 0.1vh 2vw 0.3vw white;
   color: white;
 }
 
+.box-shadow {
+  border: 0px solid black;
+  box-shadow: 0.02vw 0.1vh 2vw 0.3vw white;
+  color: white;
+}
 p {
   display: inline-block;
   margin: 4vh;
@@ -123,6 +135,7 @@ li {
   background-color: lightcoral;
   box-shadow: 0.5vw 0.3vw 0.9vw white inset;
 }
+
 button {
   box-sizing: border-box;
   margin: 2% auto;

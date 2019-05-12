@@ -52,6 +52,7 @@ const numbers = [
 ];
 const randomNumbers = [];
 const listNumbers = [...document.querySelectorAll("input")];
+const input = document.querySelector("input");
 const addButton = document.querySelector(".add");
 const form = document.querySelector("form");
 const playButton = document.querySelector(".play");
@@ -62,6 +63,7 @@ const pResult = document.querySelector(".randomNumbers p:nth-child(3)");
 const ulAddList = document.querySelector(".yourNumbers ul");
 const ulRandomList = document.querySelector(".randomNumbers ul");
 
+//add numbers to the table addedNumbers and validate form
 const addNumbers = function(e) {
   e.preventDefault();
   for (let i = 0; i < listNumbers.length; i++) {
@@ -72,12 +74,22 @@ const addNumbers = function(e) {
     }
     addedNumbers.push(Number(listNumbers[i].value));
   }
+  //hide form
   form.classList.add("hidden");
+  //show added numbers and random button
   sectionAddedList.classList.remove("hidden");
   playButton.classList.remove("hidden");
   showNumbers(ulAddList, addedNumbers, "#FFBF59");
 };
 
+// const addBoxShadow = function(e) {
+//   if (e.keyCode == 38 || e.keyCode == 40) {
+//     this.classList.toggle("box-shadow");
+//     console.log("coś");
+//   }
+// };
+
+//show added and random numbers on list
 const showNumbers = (list, numbers, color) => {
   numbers.forEach(number => {
     const li = document.createElement("li");
@@ -87,6 +99,7 @@ const showNumbers = (list, numbers, color) => {
   });
 };
 
+//generate unique 6 random mumbers
 const randomNumbersGenerator = () => {
   for (let i = 0; i < 6; i++) {
     let number = Math.floor(Math.random() * numbers.length) + 1;
@@ -94,8 +107,9 @@ const randomNumbersGenerator = () => {
       randomNumbers.push(number);
     } else i--;
   }
+  //show random list
   sectionRandomList.classList.remove("hidden");
-
+  //hide play button and show reset button
   playButton.classList.add("hidden");
   resetButton.classList.remove("hidden");
   showNumbers(ulRandomList, randomNumbers, "#E86D51");
@@ -103,6 +117,7 @@ const randomNumbersGenerator = () => {
   pResult.innerHTML += checkResult();
 };
 
+//compare added numbers with random numbers
 const checkResult = () => {
   let inc = 0;
   for (let i = 0; i < addedNumbers.length; i++) {
@@ -113,6 +128,7 @@ const checkResult = () => {
   return inc;
 };
 
+//clear table and html
 const resetGame = () => {
   randomNumbers.length = 0;
   addedNumbers.length = 0;
@@ -131,3 +147,6 @@ const resetGame = () => {
 resetButton.addEventListener("click", resetGame);
 playButton.addEventListener("click", randomNumbersGenerator);
 form.addEventListener("submit", addNumbers);
+// listNumbers.forEach(input => {
+//   input.addEventListener("keydown", addBoxShadow);
+// });
