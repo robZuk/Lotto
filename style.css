@@ -17,7 +17,7 @@ html {
   box-sizing: border-box;
   margin-top: 5vh;
   margin-bottom: 5vh;
-  height: 100vh;
+  max-height: 100vh;
 }
 
 h1 {
