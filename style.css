@@ -41,7 +41,7 @@ form {
   margin: 0 20%;
 }
 label {
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 
 .inputs {
@@ -180,7 +180,7 @@ button:hover::after {
 
 @media (orientation: landscape) and (max-height: 273px) {
   .add-button {
-    bottom: -40%;
+    bottom: -46%;
     font-size: 8vh;
   }
 }
@@ -209,7 +209,7 @@ button:hover::after {
     width: 9vh;
     height: 9vh;
     font-size: 4vh;
-    margin: 0 3vh;
+    margin: 0 1vw;
   }
 
   .add-button {
@@ -260,19 +260,20 @@ button:hover::after {
     padding: 1vw;
   }
 }
-
-@media (orientation: portrait) and (min-width: 767px) {
+@media (orientation: portrait) and (min-width: 375px) {
   h1 {
     top: 10%;
     font-size: 5vh;
   }
 
+  .inputs {
+    justify-content: space-between;
+  }
   input {
-    flex-shrink: 0;
-    width: 10vh;
-    height: 10vh;
-    margin: 2vh;
-    font-size: 4.5vh;
+    width: 8vh;
+    height: 8vh;
+    margin: 1vw;
+    font-size: 4vh;
   }
   .add-button {
     bottom: -20%;
@@ -286,5 +287,20 @@ button:hover::after {
     margin: 0 2vh;
     line-height: 12vw;
     font-size: 5vw;
+  }
+}
+@media (orientation: portrait) and (min-width: 767px) {
+  input {
+    width: 9vh;
+    height: 9vh;
+    margin: 2.5vw;
+    font-size: 4.5vh;
+  }
+}
+@media (orientation: portrait) and (min-width: 1080px) {
+  input {
+    width: 8vh;
+    height: 8vh;
+    margin: 2vw;
   }
 }
