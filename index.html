@@ -16,32 +16,32 @@
       <h1>LOTTO</h1>
 
       <form>
-        <label>Podaj 6 liczb</label>
-        <section class="inputs">
-          <input type="number" required min="1" max="49" />
-          <input type="number" required min="1" max="49" />
-          <input type="number" required min="1" max="49" />
-          <input type="number" required min="1" max="49" />
-          <input type="number" required min="1" max="49" />
-          <input type="number" required min="1" max="49" />
-        </section>
-
-        <button type="submit" class="add">Dodaj liczby</button>
+        <label
+          >Add six numbers
+          <section class="inputs">
+            <input type="number" required min="1" max="49" />
+            <input type="number" required min="1" max="49" />
+            <input type="number" required min="1" max="49" />
+            <input type="number" required min="1" max="49" />
+            <input type="number" required min="1" max="49" />
+            <input type="number" required min="1" max="49" />
+          </section>
+        </label>
+        <button type="submit" class="add-button">Add numbers</button>
       </form>
 
       <section class="yourNumbers hidden">
-        <p>Twoje liczby to:</p>
+        <p>Your numbers:</p>
         <ul></ul>
+        <button type="submit" class="play-button hidden">Losuj liczby</button>
       </section>
-      <div><button type="submit" class="play hidden">Losuj liczby</button></div>
+
       <section class="randomNumbers hidden">
-        <p>Wylosowałeś:</p>
+        <p>Random numbers:</p>
         <ul></ul>
         <p>Trafiłeś:</p>
+        <button type="submit" class="reset-button hidden">Play again</button>
       </section>
-      <div>
-        <button type="submit" class="reset hidden">Zagraj jeszcze raz</button>
-      </div>
     </div>
     <script src="main.js"></script>
   </body>

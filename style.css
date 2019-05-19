@@ -13,14 +13,16 @@ html {
 .wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
-  /* margin-top: 5vh; */
-  /* margin-bottom: 5vh; */
-  min-height: 100vh;
+  justify-content: space-around;
+  position: relative;
+  height: 100vh;
 }
 
 h1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
   letter-spacing: 5px;
   font-size: 5vw;
   font-weight: 900;
@@ -30,22 +32,23 @@ h1 {
 }
 
 form {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  height: 40vh;
+  margin: 0 20%;
 }
 label {
-  display: block;
-  margin-bottom: 2%;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 .inputs {
+  position: absolute;
+  width: 100%;
+  top: 30%;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  margin-left: 10vw;
-  margin-right: 10vw;
 }
 
 /* remove default arrows from inputs */
@@ -73,16 +76,17 @@ input {
   background-color: lightcoral;
   transition: linear 0.1s;
 }
-/* input:hover {
-  border: 0px solid black;
-  box-shadow: 0.02vw 0.1vh 2vw 0.3vw white;
-  color: white;
-} */
 
 input:focus {
   border: 0px solid black;
   box-shadow: 0.02vw 0.1vh 2vw 0.3vw white;
   color: white;
+}
+.add-button {
+  bottom: -10%;
+}
+.play-button {
+  top: 100%;
 }
 
 .box-shadow {
@@ -91,44 +95,40 @@ input:focus {
   color: white;
 }
 p {
-  display: inline-block;
-  margin: 4vh;
-  font-size: 3vw;
-  font-weight: 700;
-}
-.yourNumbers {
-  display: flex;
-  flex-direction: column;
+  font-size: 2vw;
+  margin-bottom: 3vh;
 }
 
-.yourNumbers ul {
-  display: flex;
-  flex-direction: row;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  margin-bottom: 4vw;
-  justify-content: space-around;
+p:nth-child(3) {
+  margin: 3vh;
 }
+.yourNumbers,
 .randomNumbers {
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 25vh;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
-.randomNumbers ul {
+.randomNumbers {
+  top: 50%;
+}
+
+ul {
   display: flex;
-  flex-direction: row;
-  margin-left: 10vw;
-  margin-right: 10vw;
   justify-content: space-around;
+  margin: 0 20%;
 }
 li {
   list-style-type: none;
-  width: 7vw;
-  height: 7vw;
-  line-height: 7vw;
+  width: 6vw;
+  height: 6vw;
+  line-height: 6vw;
   border: 1px solid black;
   border-radius: 50%;
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-weight: 700;
   text-align: center;
   vertical-align: middle;
@@ -137,16 +137,15 @@ li {
 }
 
 button {
-  box-sizing: border-box;
-  margin: 2% auto;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
   cursor: pointer;
-  outline: none;
   background-color: inherit;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 2vw;
   font-size: 2vw;
-  padding: 7px 7px;
+  padding: 1vw;
   transition: linear 0.2s;
 }
 
@@ -164,16 +163,118 @@ button::after {
   transform: translate(-50%, -50%);
   height: 100%;
   z-index: -1;
-  border-radius: 10px;
+  border-radius: 2vw;
   transition: ease-out 0.2s;
 }
 
 button:hover::after {
   width: 100%;
   background-color: #ff6059;
-  display: block;
 }
 
 .hidden {
   display: none;
+}
+
+@media (orientation: portrait) {
+  .wrap {
+    height: 100vh;
+  }
+
+  h1 {
+    top: 10%;
+    font-size: 6vh;
+  }
+
+  label {
+    font-size: 3vh;
+  }
+
+  .inputs {
+    flex-wrap: wrap;
+    height: 25vh;
+    top: 30%;
+  }
+
+  input {
+    width: 9vh;
+    height: 9vh;
+    font-size: 4vh;
+  }
+
+  .add-button {
+    bottom: -10%;
+  }
+  .play-button {
+    top: 130%;
+  }
+
+  p {
+    font-size: 2vh;
+    margin-bottom: 3vh;
+  }
+
+  p:nth-child(3) {
+    margin: 3vh;
+  }
+  .yourNumbers,
+  .randomNumbers {
+    position: absolute;
+    width: 100%;
+    height: 25vh;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .randomNumbers {
+    top: 50%;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0 20%;
+  }
+
+  li {
+    width: 16vw;
+    height: 16vw;
+    line-height: 16vw;
+    font-size: 6vw;
+  }
+
+  button {
+    font-size: 2.5vh;
+    padding: 1vw;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 767px) {
+  h1 {
+    top: 10%;
+    font-size: 5vh;
+  }
+
+  input {
+    flex-shrink: 0;
+    width: 10vh;
+    height: 10vh;
+    margin: 2vh;
+    font-size: 4.5vh;
+  }
+  .add-button {
+    bottom: -20%;
+  }
+  .reset-button {
+    bottom: -65%;
+  }
+  li {
+    width: 12vw;
+    height: 12vw;
+    margin: 0 2vh;
+    line-height: 12vw;
+    font-size: 5vw;
+  }
 }
