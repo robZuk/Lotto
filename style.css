@@ -79,11 +79,11 @@ input {
   transition: linear 0.1s;
 }
 
-/* input:focus {
+input:focus {
   border: 0px solid black;
   box-shadow: 0.02vw 0.1vh 2vw 0.3vw white;
   color: white;
-} */
+}
 .add-button {
   bottom: -10%;
 }
@@ -249,10 +249,10 @@ button:hover::after {
   }
 
   li {
-    width: 16vw;
-    height: 16vw;
-    line-height: 16vw;
-    font-size: 6vw;
+    width: 9vh;
+    height: 9vh;
+    line-height: 9vh;
+    font-size: 3vh;
   }
 
   button {
@@ -270,10 +270,10 @@ button:hover::after {
     justify-content: space-between;
   }
   input {
-    width: 8vh;
-    height: 8vh;
-    margin: 1vw;
-    font-size: 4vh;
+    width: 7vh;
+    height: 7vh;
+    font-size: 3vh;
+    margin: 0 2vw;
   }
   .add-button {
     bottom: -20%;
@@ -281,12 +281,12 @@ button:hover::after {
   .reset-button {
     bottom: -65%;
   }
+
   li {
-    width: 12vw;
-    height: 12vw;
-    margin: 0 2vh;
-    line-height: 12vw;
-    font-size: 5vw;
+    width: 9vh;
+    height: 9vh;
+    line-height: 9vh;
+    font-size: vw;
   }
 }
 @media (orientation: portrait) and (min-width: 767px) {
@@ -296,11 +296,19 @@ button:hover::after {
     margin: 2.5vw;
     font-size: 4.5vh;
   }
+  li {
+    width: 12vw;
+    height: 12vw;
+    margin: 0 2vh;
+    line-height: 12vw;
+    font-size: 5vw;
+  }
 }
 @media (orientation: portrait) and (min-width: 1080px) {
   input {
     width: 8vh;
     height: 8vh;
+    line-height: 8vh;
     margin: 2vw;
   }
 }
