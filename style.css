@@ -180,7 +180,7 @@ button:hover::after {
 
 @media (orientation: landscape) and (max-height: 273px) {
   .add-button {
-    bottom: -46%;
+    bottom: -50%;
     font-size: 8vh;
   }
 }
