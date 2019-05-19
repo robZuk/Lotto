@@ -79,11 +79,11 @@ input {
   transition: linear 0.1s;
 }
 
-input:focus {
+/* input:focus {
   border: 0px solid black;
   box-shadow: 0.02vw 0.1vh 2vw 0.3vw white;
   color: white;
-}
+} */
 .add-button {
   bottom: -10%;
 }
