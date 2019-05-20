@@ -24,7 +24,7 @@ h1 {
   left: 50%;
   transform: translate(-50%);
   letter-spacing: 5px;
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: 900;
   font-style: italic;
   color: black;
@@ -41,7 +41,7 @@ form {
   margin: 0 20%;
 }
 label {
-  font-size: 2.5vw;
+  font-size: 2vw;
 }
 
 .inputs {
@@ -64,14 +64,14 @@ input[type="number"] {
 }
 
 input {
-  width: 7vw;
-  height: 7vw;
+  width: 6vw;
+  height: 6vw;
   box-sizing: border-box;
   color: black;
   border: 1px solid black;
   border-radius: 90px;
   outline: none;
-  font-size: 3vw;
+  font-size: 2.5vw;
   text-align: center;
 
   font-weight: 700;
@@ -146,7 +146,7 @@ button {
   background-color: inherit;
   border: 1px solid black;
   border-radius: 2vw;
-  font-size: 3vh;
+  font-size: calc(2vh + 1vh);
   padding: 1vw;
   transition: linear 0.2s;
 }
@@ -177,13 +177,13 @@ button:hover::after {
 .hidden {
   display: none;
 }
-
+/* 
 @media (orientation: landscape) and (max-height: 273px) {
   .add-button {
-    bottom: -50%;
+    bottom: -46%;
     font-size: 8vh;
   }
-}
+} */
 @media (orientation: portrait) {
   .wrap {
     height: 100vh;
@@ -207,9 +207,9 @@ button:hover::after {
   }
 
   input {
-    width: 9vh;
-    height: 9vh;
-    font-size: 4vh;
+    width: calc(11vw + 2vh);
+    height: calc(11vw + 2vh);
+    font-size: calc(4vw + 1vh);
     margin: 0 1vw;
   }
 
@@ -226,7 +226,7 @@ button:hover::after {
   }
 
   p:nth-child(3) {
-    margin: 3vh;
+    margin: 2vh;
   }
   .yourNumbers,
   .randomNumbers {
@@ -244,24 +244,25 @@ button:hover::after {
   ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
     margin: 0 20%;
   }
 
   li {
-    width: 9vh;
-    height: 9vh;
-    line-height: 9vh;
-    font-size: 3vh;
+    width: calc(12vw + 1vh);
+    height: calc(12vw + 1vh);
+    line-height: calc(12vw + 1vh);
+    font-size: calc(3vw + 1vh);
+    margin: 0 1vw;
   }
 
   button {
-    font-size: 2.5vh;
+    font-size: calc(2.2vw + 1vh);
     padding: 1vw;
   }
 }
-@media (orientation: portrait) and (min-width: 375px) {
+/* @media (orientation: portrait) and (min-width: 375px) {
   h1 {
     top: 10%;
     font-size: 5vh;
@@ -309,4 +310,4 @@ button:hover::after {
     line-height: 8vh;
     margin: 2vw;
   }
-}
+} */
